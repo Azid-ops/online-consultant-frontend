@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Topbar from "./topbar/topbar";
+import ReduxProvider from "../store/Provider";
+import AmplifyProvider from "../components/AmplifyProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,8 +29,16 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
-        {children}
+        <>
+          <AmplifyProvider>
+            <ReduxProvider>
+              <Topbar />
+              {children}
+            </ReduxProvider>
+          </AmplifyProvider>
+        </>
       </body>
     </html>
   );
