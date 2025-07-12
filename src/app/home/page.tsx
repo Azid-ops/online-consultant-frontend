@@ -1,14 +1,13 @@
 'use client';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { getCurrentUser, type AuthUser } from 'aws-amplify/auth';
+import { useSearchParams } from 'next/navigation';
+import { type AuthUser } from 'aws-amplify/auth';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../store/userSlice';
 import '../../components/amplify-hosted-config';
 
 export default function HomePage() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const dispatch = useDispatch();
   const [user, setUserState] = useState<AuthUser | null>(null);
