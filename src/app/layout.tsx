@@ -4,7 +4,7 @@ import "./globals.css";
 import Topbar from "./topbar/topbar";
 import ReduxProvider from "../store/Provider";
 import AmplifyProvider from "../components/AmplifyProvider";
-
+import Footer from "./footer/components/footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -36,6 +36,7 @@ export default function RootLayout({
             <ReduxProvider>
               <Topbar />
               {children}
+              <Footer />
             </ReduxProvider>
           </AmplifyProvider>
         </>
