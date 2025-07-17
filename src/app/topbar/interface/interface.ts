@@ -2,6 +2,7 @@ export interface TopbarProps {
     loginUrl: string;
     logoutUrl: string;
     user: User | null;
+    onLogout: () => void;
 }
 
 export interface User {

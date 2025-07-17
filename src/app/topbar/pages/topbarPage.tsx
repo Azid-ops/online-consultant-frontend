@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { TopbarProps } from '../interface/interface';
 
-const Topbar = ({loginUrl, logoutUrl, user}: TopbarProps) => {
+const Topbar = ({loginUrl, user, onLogout}: TopbarProps) => {
     return(
         <header
         style={{
@@ -49,7 +49,7 @@ const Topbar = ({loginUrl, logoutUrl, user}: TopbarProps) => {
         <nav style={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
           {user?.email ? (
             <a
-              href={logoutUrl}
+              onClick={onLogout}
               style={{
                 color: '#fff',
                 background: '#6366f1',

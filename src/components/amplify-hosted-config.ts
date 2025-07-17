@@ -15,8 +15,8 @@ Amplify.configure({
         oauth: {
           domain: domain!,
           scopes: ['openid', 'email', 'phone'],
-          redirectSignIn: [process.env.NEXT_PUBLIC_APP_URL! + '/home'],
-          redirectSignOut: [process.env.NEXT_PUBLIC_APP_URL! + process.env.NEXT_PUBLIC_LOGOUT_URL!],
+          redirectSignIn: [process.env.NEXT_PUBLIC_REDIRECT_URL!],
+          redirectSignOut: [process.env.NEXT_PUBLIC_LOGOUT_URL!],
           responseType: 'code',
         }
       }

@@ -5,7 +5,6 @@ import Link from 'next/link';
 const AboutPage = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-            {/* Hero Section */}
             <section className="relative py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center">
